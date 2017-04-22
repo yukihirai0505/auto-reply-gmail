@@ -1,6 +1,4 @@
-# Auto mail send
-
-auto mail send script
+# auto_reply_gmail
 
 this script sends some replies for unread mail
 
@@ -13,7 +11,7 @@ Python 2.7
 ```
 $ export GMAIL_USERNAME=[Your Gmail Account Email Address]
 $ export GMAIL_PASSWORD=[Your Gmail Account Password]
-$ python auto_mail_send.py
+$ python auto_reply_gmail.py
 ```
 
 ## Option:
