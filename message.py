@@ -23,6 +23,7 @@ class Message:
         self.to = None
         self.fr = None
         self.cc = None
+        self.date = None
         self.delivered_to = None
         self.content_transfer_encoding = None
         self.sent_at = None
@@ -75,12 +76,11 @@ class Message:
 
         self.message = email.message_from_string(raw_email)
         self.headers = self.parse_headers(self.message)
-
         self.to = self.message['to']
         self.fr = self.message['from']
         self.delivered_to = self.message['delivered_to']
-
         self.subject = self.parse_subject(self.message['subject'])
+        self.date = self.message["Date"]
         self.content_transfer_encoding = self.message["Content-Transfer-Encoding"]
 
         if self.message.get_content_maintype() == "multipart":
